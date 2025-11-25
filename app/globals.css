@@ -1,0 +1,225 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ==========================================
+   ROOT VARIABLES (COLORS, RADII, BASE FONT)
+========================================== */
+:root {
+  --font-size: 14px;
+
+  --background: #ffffff;
+  --foreground: #000000;
+
+  --card: #ffffff;
+  --primary: #BF1F2C;
+  --secondary: #1C1F59;
+  --radius: 0.625rem;
+  --input: transparent;
+  --input-background: #f3f3f5;
+  --light-gray: #F5F5F5;
+
+  --card-foreground: #000000;
+  --popover: #ffffff;
+  --popover-foreground: #000000;
+  --primary-foreground: #ffffff;
+
+  --brand-primary-red: #ed1c24;
+  --brand-secondary-blue: #2e3092;
+  --brand-black: #000000;
+  --brand-white: #FFFFFF;
+  --brand-light-gray: #F5F5F5;
+
+  --secondary-foreground: #ffffff;
+  --muted: #ececf0;
+  --muted-foreground: #717182;
+  --accent: #e9ebef;
+  --accent-foreground: #030213;
+
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(0, 0, 0, 0.1);
+  --switch-background: #cbced4;
+
+  --ring: oklch(0.708 0 0);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+
+  --sidebar: oklch(0.985 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: #030213;
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+
+  /* ==========================================
+      TYPOGRAPHY VARIABLES
+  =========================================== */
+  --font-heading: var(--font-inter);
+  --font-body: var(--font-lato);
+  --font-button: var(--font-inter);
+
+  --fs-base: 16px;     /* mobile */
+  --fs-h1: 28px;
+  --fs-h2: 24px;
+  --fs-h3: 20px;
+
+  --lh-base: 1.6;
+  --ls-button: 0.2px;
+}
+
+/* DARK MODE */
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+}
+
+/* ==========================================
+   DESKTOP TYPOGRAPHY SCALE
+========================================== */
+@media (min-width: 768px) {
+  :root {
+    --fs-base: 18px;  /* desktop */
+    --fs-h1: 40px;
+    --fs-h2: 32px;
+    --fs-h3: 24px;
+  }
+}
+
+/* ==========================================
+        TAILWIND THEME MAPPINGS
+========================================== */
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-light-gray: var(--light-gray);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+}
+
+/* ==========================================
+              BASE LAYER
+========================================== */
+@layer base {
+  body {
+    font-family: var(--font-body);
+    font-size: var(--fs-base);
+    line-height: var(--lh-base);
+    @apply bg-background text-foreground;
+  }
+}
+
+/* ==========================================
+              TYPOGRAPHY
+========================================== */
+h1 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h1);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h2);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+h3 {
+  font-family: var(--font-heading);
+  font-size: var(--fs-h3);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+h4 {
+  font-family: var(--font-heading);
+  font-size: 19px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+p {
+  font-family: var(--font-body);
+  font-size: var(--fs-base);
+  line-height: var(--lh-base);
+}
+
+label {
+  font-weight: 600;
+  font-size: smaller;
+}
+
+button {
+  font-family: var(--font-button);
+  font-weight: 500;
+  letter-spacing: var(--ls-button);
+}
+
+/* ==========================================
+       BRAND COLOR UTILITIES
+========================================== */
+@layer utilities {
+  .text-brand-red { color: var(--brand-primary-red); }
+  .text-brand-blue { color: var(--brand-secondary-blue); }
+  .text-brand-black { color: var(--brand-black); }
+
+  .bg-brand-red { background-color: var(--brand-primary-red); }
+  .bg-brand-blue { background-color: var(--brand-secondary-blue); }
+  .bg-brand-light-gray { background-color: var(--brand-light-gray); }
+
+  .border-brand-red { border-color: var(--brand-primary-red); }
+  .border-brand-blue { border-color: var(--brand-secondary-blue); }
+}
+
+/* ==========================================
+              BUTTON STYLES
+========================================== */
+.btn-one {
+  @apply border-2 border-secondary text-secondary py-2.5 px-4 rounded-2xl;
+}
+
+.btn-two {
+  @apply bg-primary text-white rounded-2xl py-3 px-5;
+}
+
+.btn-three {
+  @apply text-primary rounded-2xl border-2 border-primary py-2.5 px-4;
+}
