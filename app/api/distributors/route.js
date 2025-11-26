@@ -1,4 +1,4 @@
-import { connectDB } from "@/lib/db";
+import { connectDB } from "@/lib/db.js";
 import Distributor from "@/models/Distributor";
 
 export async function POST(req) {
