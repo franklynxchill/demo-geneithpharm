@@ -1,4 +1,4 @@
-import { connectDB } from "@/lib/mongodb";
+import { connectDB } from "@/lib/db";
 import Distributor from "@/models/Distributor";
 
 export async function POST(req) {
