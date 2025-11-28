@@ -3,9 +3,9 @@
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { LuQuote, LuShoppingCart } from "react-icons/lu";
-import { useCart } from "../../context/CartContext";
-import { FaCheckCircle } from "react-icons/fa";
+import { FaCheck } from "react-icons/fa6"; // ✅ Fixed icon
 import { toast } from "sonner";
+import { useCart } from "../../context/CartContext";
 import FilterOne from "@/components/FilterOne";
 import { BsStarFill } from "react-icons/bs";
 import Manufacturing from "@/components/Manufacturing";
@@ -35,7 +35,7 @@ export default function Page() {
         const res = await fetch("/api/products");
         const json = await res.json();
 
-        // FIX: Correct backend response key
+        // Correct backend response key
         setProducts(json.products || []);
       } catch (error) {
         console.error("Error fetching products:", error);
@@ -45,57 +45,61 @@ export default function Page() {
     fetchProducts();
   }, []);
 
-  // 🔍 FILTER PRODUCTS (safe even if empty)
+  // 🔍 FILTER PRODUCTS
   const filteredProducts = products.filter((product) => {
     const matchesSearch = product.name
       .toLowerCase()
       .includes(searchQuery.toLowerCase());
-
     const matchesCategory =
       selectedCategory === "All" || product.category === selectedCategory;
-
     return matchesSearch && matchesCategory;
   });
 
-  // 🛒 ADD TO CART (with toast)
+  // 🛒 ADD TO CART (with quantity)
   const handleAddToCart = (product: Product) => {
-    addToCart(product);
+    addToCart({
+      ...product,
+      discount: product.discount ?? product.price, // fallback
+    });
     toast.success(`${product.name} added to cart`, {
-      icon: <FaCheckCircle className="text-primary text-xl" />,
+      icon: <FaCheck className="text-primary text-xl" />,
     });
   };
 
   const testimonials = [
     {
-      name: 'Mrs udoh',
-      role: 'Via Facebook',
-      content: 'Camosunate is my family anti malaria drug, my children conume the dispersible while my husband and I take the adult dose. Thanks to Geneith Pharmaceuticals!',
-      rating: 5
+      name: "Mrs udoh",
+      role: "Via Facebook",
+      content:
+        "Camosunate is my family anti malaria drug, my children conume the dispersible while my husband and I take the adult dose. Thanks to Geneith Pharmaceuticals!",
+      rating: 5,
     },
     {
-      name: 'Auwal Dogara',
-      role: 'Via Facebook',
-      content: 'Actually boneflex is good I used it years back for my arthritis and I can attest that it is the best of its kind in the market. i highly recommend it for others',
-      rating: 5
+      name: "Auwal Dogara",
+      role: "Via Facebook",
+      content:
+        "Actually boneflex is good I used it years back for my arthritis and I can attest that it is the best of its kind in the market. i highly recommend it for others",
+      rating: 5,
     },
     {
-      name: 'Abigail Ezinne',
-      role: 'Via Facebook',
-      content: 'The rash-like symptoms began to resolve within hours. I had tried several types of topical creams that did not have any effect but ketineal come through for me',
-      rating: 5
-    }
+      name: "Abigail Ezinne",
+      role: "Via Facebook",
+      content:
+        "The rash-like symptoms began to resolve within hours. I had tried several types of topical creams that did not have any effect but ketineal come through for me",
+      rating: 5,
+    },
   ];
 
   return (
     <main className="mt-16">
-      <div className="container mx-auto pb-28 px-7 md:px-0  text-center">
+      <div className="container mx-auto pb-28 px-7 md:px-0 text-center">
         <h1 className="text-3xl font-semibold">Our Products</h1>
         <p className="mt-3 max-w-2xl mx-auto text-gray-600">
           Discover our comprehensive range of high-quality pharmaceutical products.
         </p>
       </div>
-      
-      {/* 🔍 Search + Filter Component */}
+
+      {/* 🔍 Search + Filter */}
       <FilterOne
         searchQuery={searchQuery}
         handleSearch={(e) => setSearchQuery(e.target.value)}
@@ -104,7 +108,7 @@ export default function Page() {
       />
 
       {/* 🛒 Product Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto gap-8 mt-16 mb-14 px-7 md:px-0 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto gap-8 mt-16 mb-14 px-7 md:px-0">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => {
             const finalPrice = product.discount
@@ -112,10 +116,7 @@ export default function Page() {
               : product.price;
 
             return (
-              <div
-                key={product._id}
-                className="shadow rounded-2xl overflow-hidden"
-              >
+              <div key={product._id} className="shadow rounded-2xl overflow-hidden">
                 {/* Product Image */}
                 <div className="flex justify-center items-center">
                   <Image
@@ -134,20 +135,16 @@ export default function Page() {
                   </span>
 
                   <h4 className="my-3 font-semibold">{product.name}</h4>
-
                   {product.highlight && (
                     <p className="text-gray-600">{product.highlight}</p>
                   )}
 
                   {/* Price Section */}
                   <div className="flex justify-between my-2">
-                    {/* Company Price (your actual selling price) */}
                     <span className="text-xl font-bold text-primary">
-                      ₦{product.discount.toLocaleString()}
+                      ₦{finalPrice.toLocaleString()}
                     </span>
-
-                    {/* Retailer Price (shown only if higher than company price) */}
-                    {product.price > product.discount && (
+                    {product.price > finalPrice && (
                       <span className="line-through text-gray-400 text-sm">
                         ₦{product.price.toLocaleString()}
                       </span>
@@ -157,7 +154,10 @@ export default function Page() {
                   {/* Add to Cart */}
                   <button
                     onClick={() => handleAddToCart(product)}
-                    className="bg-primary py-3 w-full text-white rounded-3xl flex items-center justify-center gap-x-4 hover:bg-red-700 transition"
+                    disabled={product.stock === 0}
+                    className={`bg-primary py-3 w-full text-white rounded-3xl flex items-center justify-center gap-x-4 hover:bg-red-700 transition ${
+                      product.stock === 0 ? "bg-gray-300 cursor-not-allowed" : ""
+                    }`}
                   >
                     <LuShoppingCart className="text-xl text-white" />
                     Add to Cart
@@ -175,33 +175,37 @@ export default function Page() {
         )}
       </div>
 
-      
       {/* Testimonials */}
-      <section className=" py-16 px-7 md:px-0  max-w-7xl mx-auto">
+      <section className="py-16 px-7 md:px-0 max-w-7xl mx-auto">
         <div className="text-center">
           <h2>See What Clients Are Saying</h2>
-          <p className=" mt-3 max-w-3xl mx-auto">
+          <p className="mt-3 max-w-3xl mx-auto">
             We are very proud of the service we provide and stand by every product we carry. Read our testimonials from our happy customers.
           </p>
         </div>
-        <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
+
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-12">
           {testimonials.map((testimonial, index) => (
-            <div key={index}  className="bg-light-gray p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0">
+            <div
+              key={index}
+              className="bg-light-gray p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0"
+            >
               <div className="flex items-center gap-1 mb-2">
                 {[...Array(testimonial.rating)].map((_, i) => (
-                  <BsStarFill key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  <BsStarFill
+                    key={i}
+                    className="h-4 w-4 text-yellow-400 fill-current"
+                  />
                 ))}
               </div>
-              <h4 
-                className="font-bold text-brand-black text-sm sm:text-base mb-1"
-              >   
+              <h4 className="font-bold text-brand-black text-sm sm:text-base mb-1">
                 {testimonial.name}
               </h4>
-              <p className="text-xs sm:text-sm text-brand-blue">
-                {testimonial.role}
-              </p>
-              <div className=" flex gap-3 mt-5">
-                <div><LuQuote className=" text-2xl"/></div>
+              <p className="text-xs sm:text-sm text-brand-blue">{testimonial.role}</p>
+              <div className="flex gap-3 mt-5">
+                <div>
+                  <LuQuote className="text-2xl" />
+                </div>
                 <div>
                   <p>"{testimonial.content}"</p>
                 </div>
@@ -211,7 +215,7 @@ export default function Page() {
         </div>
       </section>
 
-      <Manufacturing /> 
+      <Manufacturing />
     </main>
   );
 }

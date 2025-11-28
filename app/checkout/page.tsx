@@ -20,7 +20,7 @@ const NIGERIAN_STATES = [
 ];
 
 export default function Page() {
-  const { cart, clearCart } = useCart();
+  const { cart } = useCart();
   const [user, setUser] = useState({
     firstName: "",
     lastName: "",
@@ -73,7 +73,6 @@ export default function Page() {
       },
       callback: function (response: any) {
         alert("✅ Payment successful! Reference: " + response.reference);
-        clearCart();
         localStorage.removeItem("cart");
         window.location.href = "/success";
       },

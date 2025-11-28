@@ -7,7 +7,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { usePathname } from "next/navigation";
 import Logo from "@/public/uploads/logo.png";
-import { useCart } from "@/context/CartContext"; // import
+import { useCart } from "@/context/CartContext";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -17,19 +17,10 @@ export default function Navbar() {
   return (
     <div className="border-b-4 border-b-secondary shadow-2xl">
       <div className="container mx-auto flex flex-row items-center justify-between py-3 px-7 md:px-0 relative">
-        
-        {/* Logo */}
         <Link href="/home">
-          <Image
-            src={Logo}
-            alt="geneith.logo"
-            width={120}   // ✅ required
-            height={50}   // ✅ required
-            className="w-[6rem] md:w-[8rem] h-auto"
-          />
+          <Image src={Logo} alt="geneith.logo" width={120} height={50} />
         </Link>
 
-        {/* Desktop Menu */}
         <nav className="hidden lg:block">
           <ul className="flex flex-row items-center gap-x-8">
             {[
@@ -44,7 +35,7 @@ export default function Navbar() {
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className={`${pathname === item.href ? "btn-two" : ""} transition-colors duration-200`}
+                  className={`${pathname === item.href ? "btn-two" : ""}`}
                 >
                   {item.label}
                 </Link>
@@ -53,9 +44,7 @@ export default function Navbar() {
           </ul>
         </nav>
 
-        {/* Right Side */}
         <div className="flex flex-row items-center gap-x-6">
-          {/* Cart */}
           <Link href="/cart" className="relative">
             <LuShoppingCart className="text-2xl" />
             {cart.length > 0 && (
@@ -65,22 +54,16 @@ export default function Navbar() {
             )}
           </Link>
 
-          {/* Login */}
-          <Link
-            href="/login"
-            className="hidden lg:flex flex-row items-center gap-x-5 btn-three"
-          >
+          <Link href="/login" className="hidden lg:flex items-center gap-x-5 btn-three">
             <FiUser />
             Login
           </Link>
 
-          {/* Mobile Menu Button */}
           <button onClick={() => setIsOpen(!isOpen)} className="lg:hidden cursor-pointer">
             {isOpen ? <IoClose className="text-2xl" /> : <IoMenuOutline className="text-2xl" />}
           </button>
         </div>
 
-        {/* Mobile Menu */}
         {isOpen && (
           <nav className="absolute left-7 top-20 w-[88%] bg-card shadow rounded-xl z-50">
             <ul className="flex flex-col items-start gap-y-4 py-3 px-4">
@@ -105,16 +88,13 @@ export default function Navbar() {
                   </Link>
                 </li>
               ))}
-
-              {/* Mobile Login */}
               <li className="w-full">
                 <Link
                   href="/login"
-                  className="flex flex-row items-center justify-center gap-x-3 btn-two w-full py-3"
+                  className="flex items-center justify-center gap-x-3 btn-two w-full py-3"
                   onClick={() => setIsOpen(false)}
                 >
-                  <FiUser />
-                  Login
+                  <FiUser /> Login
                 </Link>
               </li>
             </ul>

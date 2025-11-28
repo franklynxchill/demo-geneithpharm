@@ -16,8 +16,8 @@ export async function POST(req: Request) {
     await Message.create({ name, email, message });
 
     await resend.emails.send({
-      from: "contact@geneithpharm.com",
-      to: "admin@geneithpharm.com",
+      from: 'onboarding@resend.dev',
+      to: 'franklinonyenechere@gmail.com',
       subject: `New Message from ${name}`,
       text: `From: ${name}\nEmail: ${email}\nMessage: ${message}`,
     });
