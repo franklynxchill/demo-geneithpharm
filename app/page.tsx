@@ -41,11 +41,9 @@ export default function Home() {
 
   // Add to cart handler
   const handleAddToCart = (product: Product) => {
-    const cartItem = {
-      ...product,
-      quantity: 1, // ✅ Add default quantity
-    };
+    const cartItem = { ...product, quantity: 1 }; // ✅ Add quantity
     addToCart(cartItem);
+
     toast.success(`${product.name} added to cart`, {
       icon: <FaCheckCircle className="text-black text-xl" />,
     });

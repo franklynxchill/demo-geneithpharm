@@ -59,11 +59,14 @@ export default function Page() {
 
   // 🛒 ADD TO CART (with toast)
   const handleAddToCart = (product: Product) => {
-    addToCart(product);
+    const cartItem = { ...product, quantity: 1 }; // ✅ Add quantity
+    addToCart(cartItem);
+
     toast.success(`${product.name} added to cart`, {
       icon: <FaCheckCircle className="text-primary text-xl" />,
     });
   };
+
 
   const testimonials = [
     {
@@ -141,13 +144,13 @@ export default function Page() {
 
                   {/* Price Section */}
                   <div className="flex justify-between my-2">
-                    {/* Company Price (your actual selling price) */}
+                    {/* Company Price (actual selling price) */}
                     <span className="text-xl font-bold text-primary">
-                      ₦{product.discount.toLocaleString()}
+                      ₦{(product.discount ?? product.price).toLocaleString()}
                     </span>
 
                     {/* Retailer Price (shown only if higher than company price) */}
-                    {product.price > product.discount && (
+                    {product.discount && product.price > product.discount && (
                       <span className="line-through text-gray-400 text-sm">
                         ₦{product.price.toLocaleString()}
                       </span>

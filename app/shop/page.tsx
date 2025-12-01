@@ -33,15 +33,14 @@ export default function Page() {
 
   // ✅ Add product to cart with toast
   const handleAddToCart = (product: Product) => {
-    const cartItem = {
-      ...product,
-      quantity: 1, // ✅ Add default quantity
-    };
+    const cartItem = { ...product, quantity: 1 }; // ✅ Add quantity
     addToCart(cartItem);
+
     toast.success(`${product.name} added to cart`, {
       icon: <FaCheckCircle className="text-black text-xl" />,
     });
   };
+
 
 
   // ✅ Fetch products from API
