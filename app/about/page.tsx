@@ -334,7 +334,7 @@ export default function page() {
                   height={360}
                   className=" rounded-2xl relative mx-auto"
                 />
-                <div className=" absolute bottom-6 left-[7rem] py-3 px-4 w-80 text-center border-b-2 border-b-primary bg-white shadow">
+                <div className=" absolute bottom-6 left-28 py-3 px-4 w-80 text-center border-b-2 border-b-primary bg-white shadow">
                   <h4>{executiveTeam.name}</h4>
                   <p>{executiveTeam.position}</p>
                 </div>
@@ -347,7 +347,7 @@ export default function page() {
         <div className="max-w-7xl mx-auto py-20 px-7 md:px-0 ">
           <h3 className=" text-center">Management Team</h3>
 
-          <div className=" grid grid-cols-1 md:grid-cols-4 items-center justify-center gap-y-10 gap-y-4  mt-9">
+          <div className=" grid grid-cols-1 md:grid-cols-4 items-center justify-center gap-y-10 md:gap-y-4  mt-9">
             {managementTeam.map((managementTeam, index) => (
               <div key={index} className="w-full">
                 <Image

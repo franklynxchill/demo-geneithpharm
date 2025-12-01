@@ -41,11 +41,16 @@ export default function Home() {
 
   // Add to cart handler
   const handleAddToCart = (product: Product) => {
-    addToCart(product);
+    const cartItem = {
+      ...product,
+      quantity: 1, // ✅ Add default quantity
+    };
+    addToCart(cartItem);
     toast.success(`${product.name} added to cart`, {
       icon: <FaCheckCircle className="text-black text-xl" />,
     });
   };
+
 
   // Fetch products
   useEffect(() => {
@@ -96,7 +101,7 @@ export default function Home() {
         <div className=" md:w-1/2 text-center md:text-left">
           <h1 className=" mb-2 max-w-xl">25 Years of Trusted, Affordable Care in Nigeria</h1>
           <span>Affordable, effective healthcare solutions for every Nigerian.</span>
-          <p className=" mt-5 mb-8 max-w-[38rem] ">
+          <p className=" mt-5 mb-8 max-w-152 ">
             For 25 years, Geneith Pharmaceuticals has been at the forefront of improving healthcare for Nigerians...
           </p>
 
