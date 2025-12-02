@@ -63,7 +63,7 @@ const Manufacturing = () => {
             height={600}
              className="rounded-2xl h-[350px] md:h-[600px] object-cover w-full"
           />
-          <div className=" absolute left-4 bottom-3 w-[92%] md:w-[90%] shadow bg-white py-5 px-6">
+          <div className=" absolute left-4 bottom-3 w-[92%] md:w-[96%] shadow bg-white py-5 px-6">
             <h4 className=" font-bold mb-1">WHO-Approved Facility</h4>
             <p>
               Mowe, Ogun State • Under Construction
