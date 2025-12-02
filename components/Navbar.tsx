@@ -82,7 +82,7 @@ export default function Navbar() {
 
         {/* Mobile Menu */}
         {isOpen && (
-          <nav className="absolute left-7 top-20 w-[88%] bg-card shadow rounded-xl z-50">
+          <nav className="fixed left-7 top-20 w-[86%] bg-card shadow rounded-xl z-50">
             <ul className="flex flex-col items-start gap-y-4 py-3 px-4">
               {[
                 { href: "/", label: "Home" },

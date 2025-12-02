@@ -31,7 +31,11 @@ export default function Footer() {
         <div>
           <h3 className="text-lg font-semibold mb-3">Contact Us</h3>
           <ul className="text-sm space-y-2">
-            <li><span className="font-semibold">Address:</span> 5B, Olayiwola Street, Ilupeju, Lagos, Nigeria</li>
+            <li><span className="font-semibold">Address:</span>
+              12, Adewale Crescent<br />
+              Off Ewenla Crescent, Oshodi<br />
+              Lagos, Nigeria
+            </li>
             <li><span className="font-semibold">Phone:</span> +234 802 123 4567</li>
             <li><span className="font-semibold">Email:</span> info@geneithpharm.com</li>
           </ul>
@@ -58,7 +62,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom Bar */}
-      <div className="border-t border-white/20 mt-8 pt-4 text-center text-sm text-gray-200">
+      <div className="border-t border-white/20 max-w-3xl mx-auto mt-8 pt-4 text-center text-sm text-gray-200">
         © {new Date().getFullYear()} Geneith Pharmaceuticals Ltd. All Rights Reserved.
       </div>
     </footer>

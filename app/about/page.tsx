@@ -117,7 +117,7 @@ export default function page() {
           </p>
         </div>
         <div className=" mt-20 flex flex-col md:flex-row gap-5">
-          <div className=" md:w-1/2">
+          <div className=" md:w-1/2 px-7 md:px-0 ">
             <div className=" flex items-center gap-3 mb-5">
               <LuCalendar className=" text-3xl text-primary"/>
               <h2>Company Overview</h2>
@@ -309,7 +309,7 @@ export default function page() {
                   <p>{leadership.highlight}</p>
                 </div>
                 <span>{leadership.isFounder}</span>
-                <h2>{leadership.name}</h2>
+                <h2 className="mt-3">{leadership.name}</h2>
                 <label className=" text-secondary">{leadership.position}</label>
                 <p className=" mt-3">{leadership.bio1}</p>
                 <p className=" my-3.5">{leadership.bio2}</p>
@@ -334,7 +334,7 @@ export default function page() {
                   height={360}
                   className=" rounded-2xl relative mx-auto"
                 />
-                <div className=" absolute bottom-6 left-28 py-3 px-4 w-80 text-center border-b-2 border-b-primary bg-white shadow">
+                <div className=" absolute bottom-6 left-28 py-3 px-4 w-40 md:w-80 text-center border-b-2 border-b-primary bg-white shadow">
                   <h4>{executiveTeam.name}</h4>
                   <p>{executiveTeam.position}</p>
                 </div>
