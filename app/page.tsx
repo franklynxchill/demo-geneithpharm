@@ -99,8 +99,8 @@ export default function Home() {
         <div className=" md:w-1/2 text-center md:text-left">
           <h1 className=" mb-2 max-w-xl">25 Years of Trusted, Affordable Care in Nigeria</h1>
           <span>Affordable, effective healthcare solutions for every Nigerian.</span>
-          <p className=" mt-5 mb-8 max-w-152 ">
-            For 25 years, Geneith Pharmaceuticals has been at the forefront of improving healthcare for Nigerians...
+          <p className=" mt-5 mb-8 max-w-152">
+            For 25 years, Geneith Pharmaceuticals has been at the forefront of improving healthcare for Nigerians. Our passion for excellence drives us to produce high-quality, research-backed medicines that are both accessible and affordable. From our trusted formulations to our nationwide distribution, we are committed to ensuring every Nigerian has access to the care they deserve—today and for generations to come.
           </p>
 
           <div className=" flex flex-col md:flex-row gap-x-8 gap-y-5  items-center">

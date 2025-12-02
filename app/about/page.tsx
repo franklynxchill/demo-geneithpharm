@@ -334,7 +334,7 @@ export default function page() {
                   height={360}
                   className=" rounded-2xl relative mx-auto"
                 />
-                <div className=" absolute bottom-6 left-28 py-3 px-4 w-40 md:w-80 text-center border-b-2 border-b-primary bg-white shadow">
+                <div className=" absolute bottom-6 left-16 md:left-28 py-3 px-4 w-56 md:w-80 text-center border-b-2 border-b-primary bg-white shadow">
                   <h4>{executiveTeam.name}</h4>
                   <p>{executiveTeam.position}</p>
                 </div>

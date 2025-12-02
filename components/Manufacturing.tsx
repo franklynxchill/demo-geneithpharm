@@ -48,7 +48,7 @@ const Manufacturing = () => {
             </div>
           </div>
 
-          <div className="rounded-2xl bg-light-gray p-7 mt-9">
+          <div className="rounded-2xl bg-secondary p-7 mt-9">
             <h4 className=" mb-3">Manufacturing Excellence</h4>
             <span className=" text-base mt-2">
               Our upcoming manufacturing facility in Mowe, Ogun State will feature state-of-the-art equipment and processes that meet international WHO Good Manufacturing Practice (GMP) standards, ensuring every product meets the highest quality benchmarks.
@@ -61,7 +61,7 @@ const Manufacturing = () => {
             alt="Pharmaceutical-manufacturing"
             width={580}
             height={600}
-            className=" rounded-2xl"
+             className="rounded-2xl h-[350px] md:h-[600px] object-cover w-full"
           />
           <div className=" absolute left-4 bottom-3 w-[92%] md:w-[87%] shadow bg-white py-5 px-6">
             <h4 className=" font-bold mb-1">WHO-Approved Facility</h4>
