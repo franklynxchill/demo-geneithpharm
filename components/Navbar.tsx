@@ -25,7 +25,7 @@ export default function Navbar() {
             alt="geneith.logo"
             width={120}   // ✅ required
             height={50}   // ✅ required
-            className="w-[6rem] md:w-[8rem] h-auto"
+            className="w-24 md:w-32 h-auto"
           />
         </Link>
 
