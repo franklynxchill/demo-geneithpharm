@@ -91,12 +91,19 @@ export default function Home() {
   ];
 
   return (
+<<<<<<< HEAD
     <div className=" mt-16 md:mt-0">
       {/* ============================== */}
       {/* HERO SECTION */}
       {/* ============================== */}
       <section className=" max-w-7xl mx-auto flex flex-col md:flex-row gap-5 items-center px-7 md:px-0 ">
         <div className=" md:w-1/2 text-center md:text-left">
+=======
+    <div>
+      {/* Hero Section */}
+      <section className=" max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-5 items-center">
+        <div className=" md:w-1/2">
+>>>>>>> 5edbaef (updated commit)
           <h1 className=" mb-2 max-w-xl">25 Years of Trusted, Affordable Care in Nigeria</h1>
           <span>Affordable, effective healthcare solutions for every Nigerian.</span>
           <p className=" mt-5 mb-8 max-w-152">
@@ -117,11 +124,16 @@ export default function Home() {
           <Image src={basketDrugs} alt="basketDrugs" width={500} height={500} />
         </div>
       </section>
+<<<<<<< HEAD
 
       {/* ============================== */}
       {/* COMPANY HIGHLIGHTS */}
       {/* ============================== */}
       <section className=" max-w-7xl mx-auto px-7 md:px-0 ">
+=======
+      {/* Company Highlights */}
+      <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+>>>>>>> 5edbaef (updated commit)
         <div className="text-center">
           <h2>Why Choose Geneith Pharmaceuticals?</h2>
           <p className=" mt-3 max-w-3xl mx-auto">
@@ -159,8 +171,8 @@ export default function Home() {
       {/* ============================== */}
       {/* FEATURED PRODUCTS */}
       {/* ============================== */}
-      <section className="py-16 bg-light-gray mt-20">
-        <div className="max-w-7xl mx-auto text-center mt-5">
+      <section className="py-12 sm:py-16 lg:py-24 bg-light-gray mt-20">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-center mt-5">
           <h2>Featured Products</h2>
           <p className=" mt-3 max-w-3xl mx-auto">
             Discover our most trusted pharmaceutical products...
@@ -168,7 +180,11 @@ export default function Home() {
         </div>
 
         {/* ⭐ SHOW ONLY 4 PRODUCTS */}
+<<<<<<< HEAD
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 container mx-auto my-14 px-6 md:px-0">
+=======
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+>>>>>>> 5edbaef (updated commit)
           {products.slice(0, 4).map((product) => (
             <div key={product._id} className="bg-white rounded-2xl shadow-md overflow-hidden hover:shadow-lg transition">
               <div className="relative">
@@ -218,6 +234,7 @@ export default function Home() {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* ============================== */}
       {/* TESTIMONIALS */}
       {/* ============================== */}
@@ -247,12 +264,47 @@ export default function Home() {
               <div className="flex gap-3 mt-6">
                 <LuQuote className="text-2xl" />
                 <p>"{testimonial.content}"</p>
+=======
+
+      {/* Testimonials */}
+      <section className=" py-12 sm:py-16 lg:py-24 ">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 ">
+          <div className="text-center">
+            <h2>See What Clients Are Saying</h2>
+            <p className=" mt-3 max-w-3xl mx-auto">
+              We are very proud of the service we provide and stand by every product we carry. Read our testimonials from our happy customers.
+            </p>
+          </div>
+          <div className=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-5 mt-12">
+            {testimonials.map((testimonial, index) => (
+              <div key={index}  className="bg-light-gray p-6 sm:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 border-0">
+                <div className="flex items-center gap-1 mb-2">
+                  {[...Array(testimonial.rating)].map((_, i) => (
+                    <BsStarFill key={i} className="h-4 w-4 text-yellow-400 fill-current" />
+                  ))}
+                </div>
+                <h4 
+                  className="font-bold text-brand-black text-sm sm:text-base mb-1"
+                >   
+                  {testimonial.name}
+                </h4>
+                <p className="text-xs sm:text-sm text-brand-blue">
+                  {testimonial.role}
+                </p>
+                <div className=" flex gap-3 mt-6">
+                  <div><LuQuote className=" text-2xl"/></div>
+                  <div>
+                    <p>"{testimonial.content}"</p>
+                  </div>
+                </div>
+>>>>>>> 5edbaef (updated commit)
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* ============================== */}
       {/* PARTNER SECTION */}
       {/* ============================== */}
@@ -268,6 +320,16 @@ export default function Home() {
           <div className="flex flex-col items-center gap-5 bg-card rounded-2xl py-5">
             <Image src={medicalAssociation} alt="Nigerian Medical Association" />
             <span className="font-medium">Nigerian Medical Association</span>
+=======
+      {/* Partner & Regulatory Approvals */}
+      <section className="bg-light-gray py-12 sm:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+          <div className="text-center">
+            <h2>We Work With The Best Partners</h2>
+            <p className=" mt-3 max-w-3xl mx-auto">
+              We view our partners as an extension of our team, playing an important part in our go-to-market strategy and overall success.
+            </p>
+>>>>>>> 5edbaef (updated commit)
           </div>
 
           <div className="flex flex-col items-center gap-5 bg-card rounded-2xl py-5 px-3 text-center">
