@@ -33,7 +33,7 @@ export default function FilterOne({
     <div
       className="bg-lightGray py-6 px-4 md:px-0 shadow-md backdrop-blur-md"
     >
-      <div className="container mx-auto flex flex-col gap-4">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col gap-4">
         {/* 🔍 Search bar */}
         <div className="bg-white flex items-center gap-x-3 py-2.5 px-4 rounded-3xl w-full shadow-sm">
           <IoSearch className="text-2xl text-gray-600" />

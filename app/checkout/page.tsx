@@ -86,7 +86,7 @@ export default function Page() {
   };
 
   return (
-    <div className="container mx-auto py-10 px-4">
+    <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10 px-4">
       <Link href="/cart" className="flex gap-x-3 items-center text-primary">
         <FaLongArrowAltLeft className="text-primary" />
         Back to Cart

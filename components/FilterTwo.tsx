@@ -39,8 +39,8 @@ export default function FilterTwo({
   ];
 
   return (
-    <div className="relative bg-light-gray backdrop-blur-md border-b border-gray-200 py-10 px-7 md:px-0 shadow-sm transition-all duration-300">
-      <div className="container mx-auto flex flex-col md:flex-row items-center flex-wrap gap-4 justify-between">
+    <div className="relative bg-light-gray backdrop-blur-md border-b border-gray-200 py-10  shadow-sm transition-all duration-300">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center flex-wrap gap-4 justify-between">
 
         {/* 🔍 Search Bar + View Toggle */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 w-[90%] mx-auto md:w-full">
@@ -82,7 +82,7 @@ export default function FilterTwo({
         </div>
 
         {/* 🏷️ Categories + Filter Icon (mobile) */}
-        <div className="flex flex-row items-center gap-x-4 w-full md:w-auto mt-2 md:mt-0 hidden md:block">
+        <div className="flex-row items-center gap-x-4 w-full md:w-auto mt-2 md:mt-0 hidden md:flex ">
           {/* 🔘 Mobile Filter Icon */}
           <button
             className="text-black text-2xl md:hidden fixed top-20 left-4 bg-white shadow-md p-2 rounded-full z-50"

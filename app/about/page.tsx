@@ -109,7 +109,7 @@ export default function page() {
 
   return (
     <div>
-      <section className="max-w-7xl mx-auto py-16 px-7 md:px-0 ">
+      <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16  ">
         <div className="text-center">
           <h1>About Geneith Pharmaceuticals</h1>
           <p className=" mt-3 max-w-3xl mx-auto">
@@ -117,7 +117,7 @@ export default function page() {
           </p>
         </div>
         <div className=" mt-20 flex flex-col md:flex-row gap-5">
-          <div className=" md:w-1/2 px-7 md:px-0 ">
+          <div className=" md:w-1/2  ">
             <div className=" flex items-center gap-3 mb-5">
               <LuCalendar className=" text-3xl text-primary"/>
               <h2>Company Overview</h2>
@@ -145,7 +145,7 @@ export default function page() {
 
 
       <section className=" py-16 bg-light-gray">
-        <div className="max-w-7xl mx-auto px-7 md:px-0 ">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8  ">
           <div className=" flex flex-col md:flex-row gap-8">
             <div className=" flex flex-col  bg-card p-6 sm:p-8 rounded-2xl shadow-lg flex-1">
               <div className=" flex items-center gap-6">
@@ -210,7 +210,7 @@ export default function page() {
         </div>
       </section>
 
-      <section className=" max-w-7xl mx-auto py-16 px-7 md:px-0 ">
+      <section className=" max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-16  ">
         <div className="text-center">
           <h2>Corporate Social Responsibility</h2>
           <p className=" mt-3 max-w-3xl mx-auto">
@@ -284,7 +284,7 @@ export default function page() {
       </section>
 
       {/* Leadership Team */}
-      <section className=" bg-light-gray pt-16">
+      <section className=" bg-light-gray pt-12 sm:pt-16 lg:pt-24">
         <div className="text-center">
           <h2>Our Leadership Team</h2>
           <p className=" mt-3 max-w-3xl mx-auto">
@@ -292,7 +292,7 @@ export default function page() {
           </p>
         </div>
         {/* CEO Spotlight */}
-        <div className=" max-w-7xl mx-auto px-7 md:px-0 mt-14">
+        <div className=" max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8  mt-14">
           {leadership.map((leadership, index) => (
             <div key={index} className=" flex flex-col md:flex-row gap-6 rounded-b-3xl md:rounded-b-none md:rounded-r-3xl shadow">
               <div className="flex-1">
@@ -321,7 +321,7 @@ export default function page() {
         </div>
 
         {/* Director */}
-        <div className="max-w-7xl mx-auto py-20 px-7 md:px-0">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           <h3 className=" text-center">Board of Directors</h3>
 
           <div className=" grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6 mt-9">
@@ -344,7 +344,7 @@ export default function page() {
         </div>
 
         {/* Mgt. */}
-        <div className="max-w-7xl mx-auto py-20 px-7 md:px-0 ">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
           <h3 className=" text-center">Management Team</h3>
 
           <div className=" grid grid-cols-1 md:grid-cols-4 items-center justify-center gap-y-10 md:gap-y-4  mt-9">
@@ -368,7 +368,7 @@ export default function page() {
       </section>
 
       {/* Partner & Regulatory Approvals */}
-      <section className="max-w-7xl mx-auto py-16 px-7 md:px-0">
+      <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
         <div className="text-center">
           <h2>We Work With The Best Partners</h2>
           <p className=" mt-3 max-w-3xl mx-auto">

@@ -23,7 +23,7 @@ export default function Page() {
   const finalTotal = total - totalDiscount;
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-10">
       {cart.length === 0 ? (
         <div className="bg-light-gray shadow max-w-3xl mx-auto rounded-2xl flex flex-col items-center justify-center h-[60vh]">
           <div className="bg-secondary rounded-lg w-24 h-24 flex justify-center items-center">
@@ -45,7 +45,7 @@ export default function Page() {
         </div>
       ) : (
         <div className="w-full">
-          <h2 className="text-2xl font-bold mb-6 px-7 md:px-0">
+          <h2 className="text-2xl font-bold mb-6 ">
             Your Shopping Cart ({totalItems} items)
           </h2>
 

@@ -90,8 +90,8 @@ export default function Page() {
   ];
 
   return (
-    <main className="mt-16">
-      <div className="container mx-auto pb-28 px-7 md:px-0  text-center">
+    <main className="mt-12 sm:mt-16 lg:mt-24">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-28 text-center">
         <h1 className="text-3xl font-semibold">Our Products</h1>
         <p className="mt-3 max-w-2xl mx-auto text-gray-600">
           Discover our comprehensive range of high-quality pharmaceutical products.
@@ -107,7 +107,7 @@ export default function Page() {
       />
 
       {/* 🛒 Product Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-3 container mx-auto gap-8 mt-16 mb-14 px-7 md:px-0 ">
+      <div className="grid grid-cols-1 md:grid-cols-3 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 gap-8 mt-16 mb-14  ">
         {filteredProducts.length > 0 ? (
           filteredProducts.map((product) => {
             const finalPrice = product.discount
@@ -180,7 +180,7 @@ export default function Page() {
 
       
       {/* Testimonials */}
-      <section className=" py-16 px-7 md:px-0  max-w-7xl mx-auto">
+      <section className=" py-12 sm:py-16 lg:py-24 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
         <div className="text-center">
           <h2>See What Clients Are Saying</h2>
           <p className=" mt-3 max-w-3xl mx-auto">

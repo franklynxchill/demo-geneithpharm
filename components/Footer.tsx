@@ -5,11 +5,11 @@ import Link from "next/link";
 export default function Footer() {
   return (
     <footer className="bg-[#B02025] text-white py-10">
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-4 gap-8">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 grid md:grid-cols-4 gap-8">
         
         {/* Company Info */}
         <div>
-          <h2 className="text-xl font-semibold mb-3">Geneith Pharmaceuticals Ltd.</h2>
+          <h2 className="text-base font-semibold mb-3">Geneith Pharmaceuticals Ltd.</h2>
           <p className="text-sm text-gray-200 leading-relaxed">
             Providing affordable and quality healthcare solutions across Nigeria through trusted pharmaceutical innovation and partnerships.
           </p>

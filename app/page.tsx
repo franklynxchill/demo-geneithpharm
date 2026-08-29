@@ -117,7 +117,6 @@ export default function Home() {
       {/* ============================== */}
       {/* HERO SECTION */}
       {/* ============================== */}
-
       <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-5 items-center">
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="mb-2 max-w-xl">
@@ -170,7 +169,6 @@ export default function Home() {
       {/* ============================== */}
       {/* COMPANY HIGHLIGHTS */}
       {/* ============================== */}
-
       <section className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 mt-20">
         <div className="text-center">
           <h2>Why Choose Geneith Pharmaceuticals?</h2>
@@ -228,7 +226,6 @@ export default function Home() {
       {/* ============================== */}
       {/* FEATURED PRODUCTS */}
       {/* ============================== */}
-
       <section className="py-12 sm:py-16 lg:py-24 bg-light-gray mt-20">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 text-center">
           <h2>Featured Products</h2>
@@ -306,7 +303,6 @@ export default function Home() {
       {/* ============================== */}
       {/* TESTIMONIALS */}
       {/* ============================== */}
-
       <section className="py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -368,7 +364,6 @@ export default function Home() {
       {/* ============================== */}
       {/* PARTNERS */}
       {/* ============================== */}
-
       <section className="bg-light-gray py-12 sm:py-16 lg:py-24">
         <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
@@ -382,7 +377,6 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10 md:gap-5 mt-12">
             {/* Nigerian Medical Association */}
-
             <div className="flex flex-col items-center gap-5 bg-card rounded-2xl py-5 px-4 text-center">
               <Image
                 src={medicalAssociation}
@@ -397,7 +391,6 @@ export default function Home() {
             </div>
 
             {/* Hospital Pharmacists */}
-
             <div className="flex flex-col items-center gap-5 bg-card rounded-2xl py-5 px-3 text-center">
               <Image
                 src={associationHospital}
@@ -413,7 +406,6 @@ export default function Home() {
             </div>
 
             {/* Community Pharmacists */}
-
             <div className="flex flex-col items-center gap-5 bg-card rounded-2xl py-5 px-4 text-center">
               <Image
                 src={communityPharmacists}

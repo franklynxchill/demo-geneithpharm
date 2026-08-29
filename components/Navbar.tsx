@@ -16,7 +16,7 @@ export default function Navbar() {
 
   return (
     <div className="border-b-4 border-b-secondary shadow-2xl">
-      <div className="container mx-auto flex flex-row items-center justify-between py-3 px-7 md:px-0 relative">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between py-3  relative">
         
         {/* Logo */}
         <Link href="/home">
