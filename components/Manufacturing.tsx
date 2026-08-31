@@ -5,7 +5,7 @@ import manufacturing from "@/public/uploads/Pharmaceutical-manufacturing.jpg";
 
 const Manufacturing = () => {
   return (
-    <div className=" py-16   max-w-7xl mx-auto">
+    <div className="py-12 sm:py-16 lg:py-24 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col md:flex-row gap-7 items-center">
         <div className=" flex-1">
           <div className="flex items-center gap-3">

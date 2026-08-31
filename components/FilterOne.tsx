@@ -31,7 +31,7 @@ export default function FilterOne({
 
   return (
     <div
-      className="bg-lightGray py-6 px-4 md:px-0 shadow-md backdrop-blur-md"
+      className="bg-lightGray py-12 sm:py-16 lg:py-24 shadow-md backdrop-blur-md"
     >
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col gap-4">
         {/* 🔍 Search bar */}

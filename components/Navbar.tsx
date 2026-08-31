@@ -15,7 +15,7 @@ export default function Navbar() {
   const { cart } = useCart();
 
   return (
-    <div className="border-b-4 border-b-secondary shadow-2xl">
+    <div className="border-b-4 bg-red-700 border-b-secondary shadow-2xl">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-row items-center justify-between py-3  relative">
         
         {/* Logo */}
