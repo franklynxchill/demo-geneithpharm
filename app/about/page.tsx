@@ -321,7 +321,7 @@ export default function page() {
         </div>
 
         {/* Director */}
-        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-24 overflow-hidden">
           <h3 className=" text-center">Board of Directors</h3>
 
           <div className=" grid grid-cols-1 md:grid-cols-3 items-center justify-center gap-6 mt-9">

@@ -39,7 +39,7 @@ export default function FilterTwo({
   ];
 
   return (
-    <div className="relative bg-light-gray backdrop-blur-md border-b border-gray-200 py-12 sm:py-16 lg:py-24  shadow-sm transition-all duration-300">
+    <div className="relative bg-light-gray backdrop-blur-md border-b border-gray-200 py-12 shadow-sm transition-all duration-300">
       <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center flex-wrap gap-4 justify-between">
 
         {/* 🔍 Search Bar + View Toggle */}

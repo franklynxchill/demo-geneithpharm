@@ -91,7 +91,7 @@ export default function Page() {
 
   return (
     <main className="mt-12 sm:mt-16 lg:mt-24">
-      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-28 text-center">
+      <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-16 text-center">
         <h1 className="text-3xl font-semibold">Our Products</h1>
         <p className="mt-3 max-w-2xl mx-auto text-gray-600">
           Discover our comprehensive range of high-quality pharmaceutical products.

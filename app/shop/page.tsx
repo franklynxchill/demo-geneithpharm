@@ -111,7 +111,7 @@ export default function Page() {
     <div>
       <main className="mt-12 sm:mt-16 lg:mt-24">
         {/* Page Header */}
-        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-28 text-center">
+        <div className="max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 pb-16 text-center">
           <h1 className="text-3xl font-bold">Shop Medicines</h1>
           <p className="mt-3 max-w-2xl mx-auto text-gray-600">
             Explore our premium range of healthcare and pharmaceutical products at the best prices.
@@ -131,7 +131,7 @@ export default function Page() {
         {/* Product Display */}
         {viewMode === "grid" ? (
           // Grid View
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 my-12 sm:my-16 lg:my-24">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 my-12 sm:my-16">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product) => (
                 <div
@@ -211,7 +211,7 @@ export default function Page() {
           </div>
         ) : (
           // List View
-          <div className="flex flex-col gap-6 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 my-12 sm:my-16 lg:my-24">
+          <div className="flex flex-col gap-6 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8 my-12 sm:my-16">
             {filteredProducts.length > 0 ? (
               filteredProducts.map((product) => (
                 <div
@@ -301,7 +301,7 @@ export default function Page() {
         )}
 
         {/* Testimonials */}
-        <section className=" py-12 sm:py-16 lg:py-24 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
+        <section className=" py-12 sm:py-16 max-w-7xl mx-auto w-full px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2>See What Clients Are Saying</h2>
             <p className=" mt-3 max-w-3xl mx-auto">
