@@ -9,7 +9,7 @@ export default function Footer() {
         
         {/* Company Info */}
         <div>
-          <span className="text-base font-semibold mb-3">Geneith Pharmaceuticals Ltd.</span>
+          <span className="text-2xl font-semibold mb-3">Geneith Pharmaceuticals Ltd.</span>
           <p className="text-sm text-gray-200 leading-relaxed">
             Providing affordable and quality healthcare solutions across Nigeria through trusted pharmaceutical innovation and partnerships.
           </p>
